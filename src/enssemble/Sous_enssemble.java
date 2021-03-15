@@ -6,7 +6,6 @@
 package enssemble;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -16,7 +15,7 @@ import java.util.Set;
  *
  * @author ADMIN
  */
-// une classe pour la creation d'une seule sous enssemble (données aléatoire nombre d'elemnts entre 0 et 10 sur un enssmble varié de 0 a 10
+// une classe pour la creation d'une seule sous enssemble
 public class Sous_enssemble {
 
   int nombre_elements;  
@@ -24,26 +23,27 @@ public class Sous_enssemble {
    public Sous_enssemble() {
 
 }
+  // creaction d'un seul seul sous ensemble [id,[éléments],parents]
+  // notion de pére exemple sous ensemble SE0SE1 liste de ses parents c'est [SE0,SE1]
  public ArrayList elemments (int id){ 
             Random r=new Random();
                 ArrayList<Object>  elemment = new ArrayList<>();
                  
-                	
                         int j=0;
                         String id1= String.valueOf(id);
                         String id2="SE"+id1;
                         elemment.add(id2);
                         
-                      
+                    //création une liste ordoné des éléments de sous enssemble 
                         Set<Integer> set = new HashSet<Integer>(); 
                         ArrayList<Object>  parent1 = new ArrayList<>();
-                        int taille =  1+r.nextInt(20-10);
+                    //généré aléatoirement la taille de sous ensemble dans l'intervalle [a,b-a[
+                        int taille =  1+r.nextInt(25-10);
                        while (j < taille){ 
-			int val =  r.nextInt(20-10);
+                    //généré aléatoirement les éléments dans l'intervalle ]a,b-a[
+			int val =  r.nextInt(25-10);
                            set.add(val);
 				 j++;}
-                       
-                       
                        
                        elemment.add(set);
                        parent1.add(id);

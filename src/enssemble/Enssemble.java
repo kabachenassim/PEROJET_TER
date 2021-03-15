@@ -12,7 +12,8 @@ import java.util.ArrayList;
  * @author ADMIN
  */
 
-// une classe pour la creation de laliste des sous enssemble
+// une classe pour la creation de la liste des sous enssemble
+//avec cette structure [[SE0,[éléments],parents],[SE1,[éléments],parents],......]
 public class Enssemble {
     int nombre_sous_enssemble;
     
@@ -31,8 +32,5 @@ public class Enssemble {
                             l.add(SE.elemments(j));
 			
 				 j++;}
-					return l;}
-    
-    
-    
+					return l;}  
 }
