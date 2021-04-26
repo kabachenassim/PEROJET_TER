@@ -38,10 +38,10 @@ public class Sous_enssemble {
                         Set<Integer> set = new HashSet<Integer>(); 
                         ArrayList<Object>  parent1 = new ArrayList<>();
                     //généré aléatoirement la taille de sous ensemble dans l'intervalle [a,b-a[
-                        int taille =  1+r.nextInt(110-10);
+                        int taille =  1+r.nextInt(20-10);
                        while (j < taille){ 
                     //généré aléatoirement les éléments dans l'intervalle ]a,b-a[
-			int val =  r.nextInt(110-10);
+			int val =  r.nextInt(20-10);
                            set.add(val);
                            elem.add(val);
 				 j++;}
