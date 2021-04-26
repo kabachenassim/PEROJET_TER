@@ -25,7 +25,7 @@ public class Sous_enssemble {
 }
   // creaction d'un seul seul sous ensemble [id,[éléments],parents]
   // notion de pére exemple sous ensemble SE0SE1 liste de ses parents c'est [SE0,SE1]
- public ArrayList elemments (int id){ 
+ public ArrayList elemments (int id,Set elem){ 
             Random r=new Random();
                 ArrayList<Object>  elemment = new ArrayList<>();
                  
@@ -38,11 +38,12 @@ public class Sous_enssemble {
                         Set<Integer> set = new HashSet<Integer>(); 
                         ArrayList<Object>  parent1 = new ArrayList<>();
                     //généré aléatoirement la taille de sous ensemble dans l'intervalle [a,b-a[
-                        int taille =  1+r.nextInt(25-10);
+                        int taille =  1+r.nextInt(110-10);
                        while (j < taille){ 
                     //généré aléatoirement les éléments dans l'intervalle ]a,b-a[
-			int val =  r.nextInt(25-10);
+			int val =  r.nextInt(110-10);
                            set.add(val);
+                           elem.add(val);
 				 j++;}
                        
                        elemment.add(set);

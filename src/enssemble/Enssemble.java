@@ -6,6 +6,8 @@
 package enssemble;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -22,15 +24,19 @@ public class Enssemble {
     
     }
      
-    public ArrayList listes (int ne){ 
+    public ArrayList listes (int ne, Set elem){ 
         
               Sous_enssemble SE= new Sous_enssemble();
               ArrayList<Object>  l = new ArrayList<>();
+          // déclaration d'une liste qui va contien tous les élements pour l'algorithme recursive     
+              
                         int j=0;
                         while (j < ne){ 
                             
-                            l.add(SE.elemments(j));
+                            l.add(SE.elemments(j, elem));
 			
 				 j++;}
+                        
+                        
 					return l;}  
 }
